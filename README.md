@@ -28,3 +28,48 @@ This ensures efficient log management and saves server storage space.
 ```bash
 git clone https://github.com/Sampath-0325/Python-Automation-for-DevOps.git
 cd Python-Automation-for-DevOps
+
+           +----------------+
+           |   server.log   |
+           +----------------+
+                    |
+                    v
+        +----------------------+
+        | Check if log exists  |
+        +----------------------+
+                    |
+          +---------+---------+
+          |                   |
+          v                   v
+   Log exists?             Log missing?
+      Yes                     No
+      |                        |
+      v                        v
++----------------+         +-----------------+
+| Move log to    |         | Create new      |
+| archive/       |         | empty server.log|
+| with timestamp |         +-----------------+
++----------------+
+      |
+      v
++----------------+
+| Compress log   |
++----------------+
+      |
+      v
++----------------+
+| Clean old logs |
+| (Retention)    |
++----------------+
+      |
+      v
++----------------+
+| Generate Error |
+| Summary        |
++----------------+
+      |
+      v
++----------------+
+| Create new     |
+| server.log     |
++----------------+
