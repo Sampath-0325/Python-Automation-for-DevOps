@@ -25,50 +25,50 @@ This ensures efficient log management and saves server storage space.
 
 ## Flowchart: Python Server Log Automation
 
-           +----------------+
-           |   server.log   |
-           +----------------+
-                    |
-                    v
-        +----------------------+
-        | Check if log exists  |
-        +----------------------+
-                    |
-          +---------+---------+
-          |                   |
-          v                   v
-   Log exists?             Log missing?
-      Yes                     No
-      |                        |
-      v                        v
-+----------------+         +-----------------+
-| Move log to    |         | Create new      |
-| archive/       |         | empty server.log|
-| with timestamp |         +-----------------+
-+----------------+
-      |
-      v
-+----------------+
-| Compress log   |
-+----------------+
-      |
-      v
-+----------------+
-| Clean old logs |
-| (Retention)    |
-+----------------+
-      |
-      v
-+----------------+
-| Generate Error |
-| Summary        |
-+----------------+
-      |
-      v
-+----------------+
-| Create new     |
-| server.log     |
-+----------------+
+               +----------------+
+               |   server.log   |
+               +----------------+
+                        |
+                        v
+             +----------------------+
+             | Check if log exists  |
+             +----------------------+
+                         |
+             +-----------+-----------+
+             |                       |
+             v                       v
+        Log exists?             Log missing?
+           Yes                       No
+            |                        |
+            v                        v
+    +----------------+         +-----------------+
+    | Move log to    |         | Create new      |
+    | archive/       |         | empty server.log|
+    | with timestamp |         +-----------------+
+    +----------------+
+            |
+            v
+    +----------------+
+    | Compress log   |
+    +----------------+
+            |
+            v
+    +----------------+
+    | Clean old logs |
+    | (Retention)    |
+    +----------------+
+            |
+            v
+    +----------------+
+    | Generate Error |
+    | Summary        |
+    +----------------+
+            |
+            v
+    +----------------+
+    | Create new     |
+    | server.log     |
+    +----------------+
 
 
 ## Installation
