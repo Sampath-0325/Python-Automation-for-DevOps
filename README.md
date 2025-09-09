@@ -23,11 +23,7 @@ This ensures efficient log management and saves server storage space.
 
 ---
 
-## Installation
-1. Clone the repository:
-```bash
-git clone https://github.com/Sampath-0325/Python-Automation-for-DevOps.git
-cd Python-Automation-for-DevOps
+## Flowchart: Python Server Log Automation
 
            +----------------+
            |   server.log   |
@@ -73,3 +69,10 @@ cd Python-Automation-for-DevOps
 | Create new     |
 | server.log     |
 +----------------+
+
+
+## Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/Sampath-0325/Python-Automation-for-DevOps.git
+cd Python-Automation-for-DevOps
